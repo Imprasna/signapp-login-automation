@@ -1,0 +1,2 @@
+webdriver==3.142.6
+APScheduler==3.7.0
