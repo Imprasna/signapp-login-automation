@@ -16,14 +16,6 @@ def login_automate():
     password_textbox = driver.find_element_by_id('password')
     password_textbox.send_keys(password)
 
-    login_button = driver.find_element_by_class_name('btn')
-    login_button.submit()
-
-    # if login_automate is True:
-    click_login = driver.find_element_by_id('timecard-clock-out')
-    click_login.click()
-    print('Hello')
-
 if platform.system() == 'Windows': 
     
     print (platform.system());

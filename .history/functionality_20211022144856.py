@@ -10,20 +10,6 @@ def login_automate():
     username = 'prasanna.signatures1@gmail.com'
     password = '123456'
 
-    username_textbox = driver.find_element_by_id('email')
-    username_textbox.send_keys(username)
-
-    password_textbox = driver.find_element_by_id('password')
-    password_textbox.send_keys(password)
-
-    login_button = driver.find_element_by_class_name('btn')
-    login_button.submit()
-
-    # if login_automate is True:
-    click_login = driver.find_element_by_id('timecard-clock-out')
-    click_login.click()
-    print('Hello')
-
 if platform.system() == 'Windows': 
     
     print (platform.system());
@@ -39,22 +25,22 @@ elif platform.system() == 'Linux':
 else:
     print ("Unsupported browser bro....:(")
 
-    # username_textbox = driver.find_element_by_id('email')
-    # username_textbox.send_keys(username)
+    username_textbox = driver.find_element_by_id('email')
+    username_textbox.send_keys(username)
 
-    # password_textbox = driver.find_element_by_id('password')
-    # password_textbox.send_keys(password)
-
-
-    # login_button = driver.find_element_by_class_name('btn')
-    # login_button.submit()
+    password_textbox = driver.find_element_by_id('password')
+    password_textbox.send_keys(password)
 
 
+    login_button = driver.find_element_by_class_name('btn')
+    login_button.submit()
 
-    # # if login_automate is True:
-    # click_login = driver.find_element_by_id('timecard-clock-out')
-    # click_login.click()
-    # print('Hello')
+
+
+    # if login_automate is True:
+    click_login = driver.find_element_by_id('timecard-clock-out')
+    click_login.click()
+    print('Hello')
 
     position1 = pt.locateOnScreen("close.png", confidence = .8)
     x = position1[0]

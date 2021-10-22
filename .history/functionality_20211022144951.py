@@ -19,6 +19,8 @@ def login_automate():
     login_button = driver.find_element_by_class_name('btn')
     login_button.submit()
 
+
+
     # if login_automate is True:
     click_login = driver.find_element_by_id('timecard-clock-out')
     click_login.click()
