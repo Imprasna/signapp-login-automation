@@ -3,12 +3,8 @@ from getpass import getpass  #inbuild function
 import pyautogui as pt 
 import os
 import platform
-# from datetime import datetime, timedelta
-# from threading import Timer
-# import Scheduler
-# from apscheduler.schedulers.blocking import BlockingScheduler
-
-
+from datetime import datetime
+from threading import Timer
 
 
 
@@ -34,17 +30,9 @@ if platform.system() == 'Windows':
     
     print (platform.system());
     print(datetime.today());
-
-    # x=datetime.today()
-    # y=x.replace(day=x.day+0, hour=15, minute=34, second=0, microsecond=0)
-
-    # delta_t=y-x
-    # secs=delta_t.seconds+1
-    # print (y)
-
-    # t = Timer(secs, login_automate)
-    # t.start()
-
+    x=datetime.today()
+    y=x.replace(day=x.day+0, hour=15, minute=00, second=0, microsecond=0)
+    print "hello world"
 
     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
     driver.get('http://fibroinbeta.com/signapp_new')

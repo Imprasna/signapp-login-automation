@@ -3,13 +3,15 @@ from getpass import getpass  #inbuild function
 import pyautogui as pt 
 import os
 import platform
-# from datetime import datetime, timedelta
-# from threading import Timer
-# import Scheduler
-# from apscheduler.schedulers.blocking import BlockingScheduler
+from datetime import datetime
+from threading import Timer
+import Scheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 
-
+# Start the scheduler
+sched = BlockingScheduler()
+sched.start()
 
 
 def login_automate():
@@ -35,16 +37,17 @@ if platform.system() == 'Windows':
     print (platform.system());
     print(datetime.today());
 
-    # x=datetime.today()
-    # y=x.replace(day=x.day+0, hour=15, minute=34, second=0, microsecond=0)
+    x=datetime.today()
+    y=x.replace(day=x.day+0, hour=15, minute=3, second=0, microsecond=0)
+    print ("hello world")
 
-    # delta_t=y-x
-    # secs=delta_t.seconds+1
-    # print (y)
+    exec_date = date(2021, 10, 22)
 
-    # t = Timer(secs, login_automate)
-    # t.start()
+    # Store the job in a variable in case we want to cancel it
+    job = sched.add_date_job(login_automate, exec_date, ['text'])
 
+    # The job will be executed on November 6th, 2009 at 16:30:05
+    job = sched.add_date_job(login_automate, datetime(2021, 10, 22, 13, 10, 5), ['text'])
 
     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
     driver.get('http://fibroinbeta.com/signapp_new')

@@ -3,12 +3,9 @@ from getpass import getpass  #inbuild function
 import pyautogui as pt 
 import os
 import platform
-# from datetime import datetime, timedelta
-# from threading import Timer
-# import Scheduler
-# from apscheduler.schedulers.blocking import BlockingScheduler
-
-
+from datetime import datetime
+from threading import Timer
+from apscheduler.scheduler import Scheduler
 
 
 
@@ -35,16 +32,15 @@ if platform.system() == 'Windows':
     print (platform.system());
     print(datetime.today());
 
-    # x=datetime.today()
-    # y=x.replace(day=x.day+0, hour=15, minute=34, second=0, microsecond=0)
+    x=datetime.today()
+    y=x.replace(day=x.day+0, hour=15, minute=3, second=0, microsecond=0)
+    print ("hello world")
 
-    # delta_t=y-x
-    # secs=delta_t.seconds+1
-    # print (y)
+    # Store the job in a variable in case we want to cancel it
+    job = sched.add_date_job(my_job, exec_date, ['text'])
 
-    # t = Timer(secs, login_automate)
-    # t.start()
-
+    # The job will be executed on November 6th, 2009 at 16:30:05
+    job = sched.add_date_job(my_job, datetime(2021, 11, 6, 16, 30, 5), ['text'])
 
     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
     driver.get('http://fibroinbeta.com/signapp_new')

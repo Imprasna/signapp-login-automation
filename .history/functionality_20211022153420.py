@@ -3,8 +3,8 @@ from getpass import getpass  #inbuild function
 import pyautogui as pt 
 import os
 import platform
-# from datetime import datetime, timedelta
-# from threading import Timer
+from datetime import datetime, timedelta
+from threading import Timer
 # import Scheduler
 # from apscheduler.schedulers.blocking import BlockingScheduler
 
