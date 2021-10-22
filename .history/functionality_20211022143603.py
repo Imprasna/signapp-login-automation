@@ -23,7 +23,7 @@ elif platform.system() == 'Linux':
     # driver = webdriver.Chrome()
 
 else:
-    print ("Unsupported browser bro....:(")
+    print ("It is not Windows neither linux Bro....:(")
 
     username_textbox = driver.find_element_by_id('email')
     username_textbox.send_keys(username)

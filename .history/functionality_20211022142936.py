@@ -5,25 +5,20 @@ import os
 import platform
 
 
+if platform.system() == 'Windows': {
+    
+    print (platform.system());
+    driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
+
 
 def login_automate():
     username = 'prasanna.signatures1@gmail.com'
     password = '123456'
 
-if platform.system() == 'Windows': 
-    
-    print (platform.system());
-    driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
+
+    driver = webdriver.Chrome()
     driver.get('http://fibroinbeta.com/signapp_new')
 
-elif platform.system() == 'Linux': 
-    print (platform.system());
-    driver = webdriver.Chrome();
-    driver.get('http://fibroinbeta.com/signapp_new')
-    # driver = webdriver.Chrome()
-
-else:
-    print ("Unsupported browser bro....:(")
 
     username_textbox = driver.find_element_by_id('email')
     username_textbox.send_keys(username)
@@ -50,21 +45,15 @@ else:
     close_dialog = driver.find_element_by_class_name('btn-default')
 
 login_automate()
+}
 
-# if platform.system() == 'Windows': 
-    
-#     print (platform.system());
-#     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
-
-# elif platform.system() == 'Linux': 
-#     print (platform.system());
-#     driver = webdriver.Chrome();
-
-
+elif platform.system() == 'Linux':
+    print (platform.system());
+    driver = webdriver.Chrome();
     # login_automate()
 
-# else:
-#     print ("It is not Windows neither linux Bro....:(")
+else:
+    print ("It is not Windows neither linux Bro....:(")
     
 # print(os.name)
 # print(platform.system())

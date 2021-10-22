@@ -22,8 +22,6 @@ elif platform.system() == 'Linux':
     driver.get('http://fibroinbeta.com/signapp_new')
     # driver = webdriver.Chrome()
 
-else:
-    print ("Unsupported browser bro....:(")
 
     username_textbox = driver.find_element_by_id('email')
     username_textbox.send_keys(username)

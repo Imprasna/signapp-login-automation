@@ -14,7 +14,6 @@ if platform.system() == 'Windows':
     
     print (platform.system());
     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
-    driver.get('http://fibroinbeta.com/signapp_new')
 
 elif platform.system() == 'Linux': 
     print (platform.system());
@@ -22,8 +21,6 @@ elif platform.system() == 'Linux':
     driver.get('http://fibroinbeta.com/signapp_new')
     # driver = webdriver.Chrome()
 
-else:
-    print ("Unsupported browser bro....:(")
 
     username_textbox = driver.find_element_by_id('email')
     username_textbox.send_keys(username)
@@ -63,8 +60,8 @@ login_automate()
 
     # login_automate()
 
-# else:
-#     print ("It is not Windows neither linux Bro....:(")
+else:
+    print ("It is not Windows neither linux Bro....:(")
     
 # print(os.name)
 # print(platform.system())

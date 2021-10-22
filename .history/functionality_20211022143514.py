@@ -11,6 +11,8 @@ def login_automate():
     password = '123456'
 
 if platform.system() == 'Windows': 
+    username = 'prasanna.signatures1@gmail.com'
+    password = '123456'
     
     print (platform.system());
     driver = webdriver.Chrome('C:\\\Program Files\\\chromedriver_win32\\\chromedriver.exe');
@@ -22,8 +24,6 @@ elif platform.system() == 'Linux':
     driver.get('http://fibroinbeta.com/signapp_new')
     # driver = webdriver.Chrome()
 
-else:
-    print ("Unsupported browser bro....:(")
 
     username_textbox = driver.find_element_by_id('email')
     username_textbox.send_keys(username)
